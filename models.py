@@ -14,7 +14,7 @@ def compute_and(question, bit):
         cur.execute("UPDATE ands SET curand=?, responses=? WHERE question=?", (ret[0], ret[1], question))
     else:
         ret = bit, 1
-        cur.execute("INSERT INTO ands (question, curand, responses) VALUES (?, ?, 1)", (question, ret))
+        cur.execute("INSERT INTO ands (question, curand, responses) VALUES (?, ?, 1)", (question, ret[0]))
 
     con.commit()
     con.close()
