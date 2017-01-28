@@ -1,8 +1,6 @@
 import sqlite3 as sql
 
 def compute_and(question, bit):
-    result = 0
-
     con = sql.connect("database.db")
     cur = con.cursor()
 
